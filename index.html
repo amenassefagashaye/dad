@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Alliance for Development</title>
+    <style>
+        /* Styles for GAD Website */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Light background */
+        }
+        /* Logo Styling */
+         .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;  /* Adjust size as needed */
+            height: 60px; /* Adjust size as needed */
+            border-radius: 50%;
+            background-color: white; /* white background */
+            margin: 10px;
+             border: 2px solid red; /* Red border*/
+             margin-left: 20px;
+            
+        }
+
+        .logo {
+            font-size: 1.5rem; /* Adjust size as needed */
+            font-weight: bold;
+            color: red; /* Red color */
+             animation: pulse 2s ease-in-out infinite alternate;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            background-color: #2980b9; /*green-blue background*/
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+           justify-content: space-between;
+        }
+
+        nav h1 {
+            text-align: center;
+             font-weight: bold;
+             color: white; /* White text */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            
+            
+            
+        }
+
+        nav li {
+           margin-left: 20px;
+        }
+
+        nav h4{
+            font-weight: bold;
+              color: white; /* White text */
+            
+        }
+
+        nav a {
+            text-decoration: none;
+             color: white; /* White text */
+            padding: 5px 10px;
+        }
+
+        /* Hero Section Styling */
+         .hero {
+            background-color: darkblue; /*darkblue background */
+            padding: 50px;
+            text-align: center;
+            color: white; /* White text */
+           
+        }
+
+         .hero h4 {
+            color: green;
+            font-weight: bold;
+        }
+         .hero h3 {
+            color: yellow;
+           font-weight: bold;
+           
+        }
+
+        .hero h4:nth-of-type(2) {
+            color: red;
+            font-weight: bold;
+           line-height: 2.5;
+        }
+        .hero p{
+             color: white;
+              line-height: 1.6;
+        }
+
+        /* Services Section Styling */
+         .services {
+             padding: 30px;
+             background-color: #f0f0f0; /* Light background */
+              display: flex;
+             flex-wrap: wrap;
+            justify-content: center;
+
+        }
+         .service-card{
+            background-color: lightblue;
+             padding: 20px;
+           margin: 10px;
+            border-radius: 8px;
+             width: 250px; /* Adjust as needed */
+            text-align: center;
+             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .service-card h3{
+             color: #333;
+       }
+
+        .service-card button {
+           background-color: #2980b9; /*green-blue background*/
+             color: white;
+             padding: 10px 15px;
+            border: none;
+             border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+
+         .service-card button:hover{
+           background-color: #226e9f; /*darker green-blue background*/
+         }
+
+         /* Blog Section Styling */
+        .blog {
+            padding: 30px;
+             background-color: lightblue;
+            
+        }
+        .blog h2{
+           text-align: center;
+        }
+
+        .blog-container {
+             display: flex;
+            flex-wrap: wrap-reverse; /*reverse*/
+             justify-content: center;
+            gap: 20px; /* gap between blog cards */
+        }
+        .blog-card {
+           background-color: white;
+            padding: 20px;
+           border-radius: 8px;
+           width: 300px; /* Adjust as needed */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+             text-align: left;
+        }
+        .blog-card h3{
+              color: #333;
+        }
+        .blog-card button {
+          background-color: darkblue;
+             color: white;
+            padding: 10px 15px;
+            border: none;
+           border-radius: 5px;
+           cursor: pointer;
+           transition: background-color 0.3s ease;
+             margin-top: 10px;
+       }
+        .blog-card button:hover{
+             background-color: blue;
+        }
+        /* Call to Action Section Styling */
+        .cta {
+            text-align: center;
+           padding: 30px;
+             background-color: #f0f0f0; /* Light background */
+        }
+         .cta a{
+             text-decoration: none;
+             color: #333;
+             padding: 5px 10px;
+           font-weight: bold;
+        }
+        /* Additional Pages Styling */
+        .additional-pages {
+             padding: 30px;
+             background-color: #f0f0f0; /* Light background */
+        }
+        .additional-pages h2{
+            text-align: center;
+         }
+
+        .additional-pages p {
+              margin-bottom: 15px;
+              line-height: 1.6;
+        }
+        .additional-pages button {
+            background-color: #2980b9; /*green-blue background*/
+           color: white;
+           padding: 10px 15px;
+           border: none;
+            border-radius: 5px;
+             cursor: pointer;
+            transition: background-color 0.3s ease;
+             margin-top: 10px;
+        }
+          .additional-pages button:hover {
+           background-color: #226e9f; /*darker green-blue background*/
+        }
+        /* Follow Us Section Styling */
+        .follow-us {
+           background-color: lightblue;
+           padding: 20px;
+             text-align: center;
+        }
+        .follow-us ul {
+            list-style: none;
+            padding: 0;
+             margin: 0;
+             display: flex;
+             justify-content: center; /* Horizontally center the list */
+            gap: 10px; /* Space between items */
+         }
+         .follow-us li{
+              margin-bottom: 5px;
+        }
+        .follow-us a{
+           text-decoration: none;
+            color: #333;
+              font-weight: bold;
+        }
+         .follow-us button {
+             background-color: #2980b9; /*green-blue background*/
+             color: white;
+             padding: 10px 15px;
+             border: none;
+             border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .follow-us button:hover{
+             background-color: #226e9f; /*darker green-blue background*/
+        }
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+             padding: 20px;
+            text-align: center;
+           
+        }
+       footer a{
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Responsive Design */
+       @media (max-width: 768px) {
+           nav ul {
+               flex-direction: column;
+                 align-items: flex-start;
+           }
+           nav li{
+               margin: 10px 0;
+           }
+
+             .hero {
+              padding: 20px;
+            }
+            .hero h4{
+                 font-size: 1.0rem;
+           }
+            .hero h3{
+                 font-size: 1.1rem;
+             }
+            .services{
+               padding: 20px;
+            }
+            .service-card{
+                 width: 100%;
+            }
+            .blog {
+                padding: 20px;
+            }
+            .blog-card{
+                width: 100%;
+           }
+            .cta {
+               padding: 20px;
+           }
+             .additional-pages {
+               padding: 20px;
+            }
+            .follow-us{
+               padding: 10px;
+            }
+             .follow-us ul {
+               flex-direction: column;
+                 align-items: center;
+             }
+            footer {
+                padding: 10px;
+           }
+        }
+
+       /*Form Styling*/
+         .form-container{
+           background-color: lightblue;
+            padding: 20px;
+           margin: 20px auto;
+            border-radius: 8px;
+             width: 400px; /* Adjust as needed */
+             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+       }
+
+        form label {
+             display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+         }
+
+       form input, form textarea {
+            width: calc(100% - 12px); /* Adjust as needed */
+            padding: 10px;
+           margin-bottom: 10px;
+             border: 1px solid #ddd;
+           border-radius: 4px;
+            box-sizing: border-box;
+         }
+        form button {
+             background-color: blue;
+            color: white;
+           padding: 10px 15px;
+            border: none;
+           border-radius: 5px;
+           cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+         form button:hover {
+            background-color: darkblue;
+        }
+         .error{
+             color: red;
+           margin-bottom: 10px;
+        }
+
+        /* Winner Profile Styling */
+        .winner-profile-container {
+             display: none; /* Hidden by default */
+             position: fixed;
+            top: 0;
+            left: 0;
+             width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+             z-index: 1000;
+            overflow: auto;
+           padding: 20px;
+            box-sizing: border-box; /* Add box-sizing */
+            justify-content: center; /* Vertically and Horizontally center */
+            align-items: center;
+       }
+         .winner-profile {
+             background-color: white;
+             border-radius: 8px;
+           padding: 20px;
+            width: 80%; /* Adjust width for big screens */
+             max-width: 600px; /* Set maximum width */
+             margin: 0 auto; /* Center the modal */
+             text-align: center;
+           position: relative;
+       }
+
+         .winner-profile img{
+            width: 200px;
+             height: 200px;
+            border-radius: 50%;
+             display: block;
+            margin: 0 auto 10px; /* Center the image and add some margin */
+             object-fit: cover; /*cover photo in circle*/
+        }
+        .winner-profile h3 {
+            margin-bottom: 10px;
+       }
+         .winner-profile p {
+            margin-bottom: 10px;
+             line-height: 1.6;
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+             font-size: 20px;
+            cursor: pointer;
+              border: none;
+           background: none;
+       }
+
+       .member-list{
+             margin-top: 20px;
+             text-align: left;
+        }
+         .member-list h4{
+             margin-bottom: 10px;
+            text-align: center;
+        }
+
+         .member-list ul{
+              padding-left: 20px;
+             list-style: none;
+         }
+        .member-list li{
+            margin-bottom: 5px;
+       }
+
+        @media (min-width: 769px) {
+        .winner-profile-container{
+            display: flex; /* Display modal on larger screens */
+        }
+       }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo-container">
+            <span class="logo" id="dynamicLogo">GAD</span>
+        </div>
+        <h1>Global Alliance for Development</h1>
+        <ul>
+            <li><a href="#home"  onclick="showWinnerProfile()"><h4>Home</h4></a></li>
+            <li><a href="#services"><h4>Services</h4></a></li>
+           <li><a href="#register"><h4>Register</h4></a></li>
+       </ul>
+    </nav>
+    <!-- Winner Profile Section (Hidden initially) -->
+   <section class="winner-profile-container" id="winnerProfileContainer">
+        <div class="winner-profile">
+            <button class="close-button" onclick="hideWinnerProfile()">×</button>
+            <img src="winner_photo.jpg" alt="Winner Profile">
+             <h3>Winner Name</h3>
+            <p>This is a description of the winner. The winners are the members of the site, and you can view all of them in the member list.</p>
+           <div class="member-list">
+                <h4>Members List</h4>
+                <ul>
+                    <li>Assefa Gashaye</li>
+                   <li>Abebe Bekele</li>
+                   <li>Chaltu Girma</li>
+                    <li>Birtukan Tadesse</li>
+                   <li>Yosef Dereje</li>
+                   <li>Hanna Mamo</li>
+               </ul>
+          </div>
+        </div>
+   </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+       <h4>Unlocking Global Participation: A Collaborative Effort to Empower Minds, Liberate Finances, and Ensure Sustainable Development for All.</h4>
+        <h3>ዓለም አቀፍ ተሳትፎን፡ አእምሮን ለማብቃት፣ የገንዘብን ነፃነትንና ዘላቂ ልማት ለሁሉም ለማረጋገጥ የሚደረግ ትብብር።</h3>
+         <h4>We connect resources and communities worldwide, providing comprehensive services that drive sustainable development and lasting positive impact.</h4>
+       <p>Join us in creating a brighter future for everyone.</p>
+    </section>
+
+    <!-- Featured Services Section -->
+   <section class="services" id="services">
+        <div class="service-card">
+             <img src="financial_icon.png" alt="Financial Services Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+             <h3>Financial Services</h3>
+             <p>Comprehensive financial solutions for individuals and businesses.</p>
+            <button onclick="location.href='#about'">Learn More</button>
+       </div>
+       <div class="service-card">
+            <img src="ownership_icon.png" alt="Ownership Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+           <h3>Ownership</h3>
+            <p>Guidance and support for managing and protecting assets.</p>
+            <button onclick="location.href='#about'">Learn More</button>
+        </div>
+       <div class="service-card">
+            <img src="betting_icon.png" alt="Betting Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+            <h3>Betting</h3>
+           <p>Responsible betting and gaming solutions.</p>
+            <button onclick="location.href='#about'">Learn More</button>
+        </div>
+         <div class="service-card">
+           <img src="game_icon.png" alt="Game Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+            <h3>Game</h3>
+            <p>Various engaging and entertaining games.</p>
+           <button onclick="location.href='#about'">Learn More</button>
+       </div>
+      <div class="service-card">
+             <img src="lottery_icon.png" alt="Lottery Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+            <h3>Lottery</h3>
+           <p>Opportunities to participate in various lottery draws.</p>
+           <button onclick="location.href='#about'">Learn More</button>
+      </div>
+        <div class="service-card">
+            <img src="health_icon.png" alt="Health & Wellness Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+           <h3>Health & Wellness</h3>
+            <p>Services focused on improving physical and mental well-being.</p>
+            <button onclick="location.href='#about'">Learn More</button>
+       </div>
+       <div class="service-card">
+           <img src="technology_icon.png" alt="Technology Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+            <h3>Technology & IT Services</h3>
+            <p>Solutions to leverage technology for innovation and growth.</p>
+            <button onclick="location.href='#about'">Learn More</button>
+        </div>
+        <div class="service-card">
+            <img src="business_icon.png" alt="Business Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+           <h3>Business & Professional Services</h3>
+           <p>Support for various business needs, from strategy to consulting.</p>
+            <button onclick="location.href='#about'">Learn More</button>
+       </div>
+         <div class="service-card">
+           <img src="communication_icon.png" alt="Communication Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+           <h3>Communication & Information Services</h3>
+           <p>Enhancing communication and information access.</p>
+            <button onclick="location.href='#about'">Learn More</button>
+        </div>
+         <div class="service-card">
+            <img src="care_icon.png" alt="Care Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+            <h3>Care & Support Services</h3>
+            <p>Providing compassionate support and care for various needs.</p>
+            <button onclick="location.href='#about'">Learn More</button>
+        </div>
+       <div class="service-card">
+            <img src="development_icon.png" alt="Development Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+             <h3>Professional & Personal Development</h3>
+            <p>Training and resources for personal and professional growth.</p>
+            <button onclick="location.href='#about'">Learn More</button>
+       </div>
+        <div class="service-card">
+             <img src="virtual_icon.png" alt="Virtual Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+           <h3>Virtual & Online Services</h3>
+            <p>Convenient online services and digital solutions.</p>
+           <button onclick="location.href='#about'">Learn More</button>
+        </div>
+        <div class="service-card">
+            <img src="entertainment_icon.png" alt="Entertainment Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+           <h3>Entertainment & Recreation Services</h3>
+            <p>Fun and engaging entertainment experiences.</p>
+             <button onclick="location.href='#about'">Learn More</button>
+       </div>
+       <div class="service-card">
+             <img src="creative_icon.png" alt="Creative Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+           <h3>Creative & Entertainment Services</h3>
+            <p>Diverse options for creative entertainment.</p>
+           <button onclick="location.href='#about'">Learn More</button>
+        </div>
+       <div class="service-card">
+            <img src="educational_icon.png" alt="Educational Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+             <h3>Educational & Learning Services</h3>
+           <p>Resources for lifelong learning and skill development.</p>
+           <button onclick="location.href='#about'">Learn More</button>
+        </div>
+       <div class="service-card">
+             <img src="personal_icon.png" alt="Personal Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+           <h3>Personal & Lifestyle Services</h3>
+           <p>Services to improve and support daily life.</p>
+           <button onclick="location.href='#about'">Learn More</button>
+        </div>
+       <div class="service-card">
+            <img src="real_estate_icon.png" alt="Real Estate Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+            <h3>Real Estate & Property Services</h3>
+            <p>Services for buying, selling, and managing properties.</p>
+            <button onclick="location.href='#about'">Learn More</button>
+        </div>
+        <div class="service-card">
+            <img src="financial_investment_icon.png" alt="Financial Investment Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+            <h3>Financial & Investment Services</h3>
+            <p>Tailored advice for your financial goals.</p>
+           <button onclick="location.href='#about'">Learn More</button>
+       </div>
+       <div class="service-card">
+            <img src="consulting_icon.png" alt="Consulting Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+            <h3>Specialized Consulting & Advisory</h3>
+           <p>Expert consulting services for specific issues.</p>
+            <button onclick="location.href='#about'">Learn More</button>
+        </div>
+      <div class="service-card">
+            <img src="niche_icon.png" alt="Niche Icon" style="width:50px; height:50px; display:block; margin:0 auto">
+           <h3>Niche & Emerging Services</h3>
+           <p>Unique and specialized services tailored to your needs.</p>
+             <button onclick="location.href='#about'">Learn More</button>
+       </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog">
+       <h2>Latest Blog Posts</h2>
+        <div class="blog-container">
+           <div class="blog-card">
+               <h3>Blog Post 1</h3>
+               <p>Date: 2024-07-25</p>
+                <p>This is an example excerpt of a blog post, talking about some important topics.</p>
+               <button onclick="location.href='#about'">Read More</button>
+           </div>
+            <div class="blog-card">
+               <h3>Blog Post 2</h3>
+               <p>Date: 2024-08-10</p>
+               <p>Another excerpt from a blog, discussing various different ideas.</p>
+                 <button onclick="location.href='#about'">Read More</button>
+            </div>
+          <div class="blog-card">
+                <h3>Blog Post 3</h3>
+                <p>Date: 2024-09-15</p>
+                <p>This is the third blog post excerpt, exploring some fascinating things.</p>
+                <button onclick="location.href='#about'">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <h2><a href="#contact">Contact Us</a></h2>
+    </section>
+     <!-- Registration Form-->
+   <section class="form-container" id="register">
+        <form id="registrationForm">
+            <h2>Register</h2>
+             <label for="firstName">First Name:</label>
+             <input type="text" id="firstName" name="firstName" required>
+             <div class="error" id="firstNameError"></div>
+           <label for="lastName">Last Name:</label>
+              <input type="text" id="lastName" name="lastName" required>
+            <div class="error" id="lastNameError"></div>
+            <label for="email">Email:</label>
+           <input type="email" id="email" name="email" required>
+            <div class="error" id="emailError"></div>
+            <label for="password">Password:</label>
+             <input type="password" id="password" name="password" required>
+             <div class="error" id="passwordError"></div>
+              <!-- Placeholder for Camera-based Verification -->
+           <label>Face Verification:</label>
+              <button type="button" onclick="startFaceVerification()">Start Face Verification</button>
+            <div class="error" id="verificationError"></div>
+              <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Additional Pages -->
+    <section class="additional-pages" id="services">
+        <h2>Services Page</h2>
+         <p>Here are the detailed descriptions of our services, including optional pricing and 'Get a Quote' buttons. For Example, this is service Financial Services:</p>
+        <p><strong>Financial Services:</strong></p>
+         <p><strong>Description:</strong> We offer comprehensive financial solutions tailored to meet your individual and business needs. From basic banking to complex investment strategies, our services are designed to help you achieve your financial goals.</p>
+         <p><strong>Pricing:</strong> Our fees are based on the specific service you require, tailored to ensure value and accessibility. We offer various payment options, including monthly subscription, one-time fees, and customized plans.</p>
+          <button onclick="location.href='#contact'">Get a Quote</button>
+        <p>We offer many kind of services, you can see the main one on <a href="#services">Service Section</a> above.</p>
+    </section>
+
+    <section class="additional-pages" id="about">
+       <h2>About Page</h2>
+          <p><strong>Company History:</strong> The Global Alliance for Development was founded in 2025 with the goal to empower communities through global collaboration. The group is dedicated to drive sustainable development.</p>
+        <p><strong>Mission:</strong> Our mission is to connect resources with communities worldwide, providing services that drive sustainable development and create a lasting, positive impact.</p>
+         <p><strong>Team Introductions:</strong> Our team is made up of diverse individuals with expertise in various fields, including finance, tech, education, and community development. Each team member brings valuable knowledge and dedication.</p>
+         <p><strong>Goals:</strong> Our primary goals include increasing global participation, empowering individuals financially, and ensuring that all our services are focused on sustainable and long-term growth. The team is committed to integrity, transparency and impact.</p>
+          <a href="#contact"> <button>Contact Us</button></a>
+     </section>
+
+     <section class="additional-pages" id="terms">
+        <h2>Terms & Conditions</h2>
+          <p>For detailed information regarding our terms and conditions, please visit:</p>
+         <p><a href="#terms-of-service">Terms of Service</a></p>
+         <p><a href="#privacy-policy">Privacy Policy</a></p>
+        <a href="#terms-of-service"> <button>Terms of Service</button></a>
+       <a href="#privacy-policy"><button>Privacy Policy</button></a>
+    </section>
+
+    <!-- Follow Us Section -->
+     <section class="follow-us">
+       <h2>Follow Us</h2>
+        <ul>
+            <li><a href="https://www.youtube.com/channel/UCLBivSEh30F44ptAAgEVRUA?sub_confirmation=1"><button>YouTube</button></a></li>
+            <li><a href="github.com/settings/profile"><button>GitHub</button></a></li>
+             <li><a href="facebook.com/profile.php?id=100005477598347"><button>Facebook</button></a></li>
+           <li><a href="t.me/GOGSmore"><button>Telegram</button></a></li>
+            <li><a href="linkedin.com/in/assefa-gashaye-a5b0a11a1"><button>LinkedIn</button></a></li>
+            <li><a href="myaccount.google.com"><button>Google</button></a></li>
+           <li><a href="tiktok.com/@assefagashaye?lang=en"><button>TikTok</button></a></li>
+            <li><a href="amazon.com/gp/cart/view.html?ref_=nav_cart"><button>Amazon</button></a></li>
+           <li><a href="x.com/AssefaGash88287"><button>X (Twitter)</button></a></li>
+        </ul>
+   </section>
+
+    <!-- Footer -->
+    <footer>
+       <p>© 2025 All rights reserved.</p>
+        <p><a href="#terms-of-service">Terms of Service</a> | <a href="#privacy-policy">Privacy Policy</a></p>
+    </footer>
+
+    <script>
+        // Dynamic Logo Replacement Function
+        function updateLogo(initial) {
+            document.getElementById('dynamicLogo').textContent = initial;
+        }
+        // Example of a user signing in or registering and updating logo
+        // Simulate registration/signin, you'll replace this with your actual authentication logic
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+             event.preventDefault(); // prevent default form submission
+
+            // Get form values
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            //Reset error messages
+           document.getElementById('firstNameError').textContent = '';
+            document.getElementById('lastNameError').textContent = '';
+             document.getElementById('emailError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+            document.getElementById('verificationError').textContent = '';
+
+             // Validate First Name
+            if (!firstName) {
+               document.getElementById('firstNameError').textContent = 'First name is required.';
+               return;
+            }
+
+           // Validate Last Name
+           if (!lastName) {
+               document.getElementById('lastNameError').textContent = 'Last name is required.';
+                return;
+            }
+
+           // Validate email
+            if (!email) {
+               document.getElementById('emailError').textContent = 'Email is required.';
+                return;
+            }
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)){
+                document.getElementById('emailError').textContent = 'Invalid email format.';
+                return;
+           }
+            //validate Password
+            if (!password){
+              document.getElementById('passwordError').textContent = 'Password is required.';
+               return;
+           }
+          if (password.length < 6){
+              document.getElementById('passwordError').textContent = 'Password must be at least 6 characters long.';
+              return;
+           }
+            // Update logo with user's first initial
+            updateLogo(firstName.charAt(0).toUpperCase());
+
+            // Alert for successful registration
+             alert("Registration successful!");
+            document.getElementById('registrationForm').reset(); // clear the form
+        });
+
+        // Placeholder for Camera-based Verification
+         function startFaceVerification() {
+          // Add logic here to initiate camera and call backend verification
+            document.getElementById('verificationError').textContent = 'Face verification process started.';
+          // This part will require backend integration with a face verification API
+         }
+         // Basic Button Animation (Simple hover effect)
+        const buttons = document.querySelectorAll('button');
+         buttons.forEach(button => {
+           button.addEventListener('mouseover', () => {
+             button.style.transform = 'scale(1.05)';
+           });
+            button.addEventListener('mouseout', () => {
+            button.style.transform = 'scale(1)';
+            });
+         });
+        // Winner Profile Function
+        function showWinnerProfile() {
+            document.getElementById('winnerProfileContainer').style.display = 'flex';
+
+        }
+         function hideWinnerProfile() {
+             document.getElementById('winnerProfileContainer').style.display = 'none';
+         }
+
+    </script>
+
+</body>
+</html>
